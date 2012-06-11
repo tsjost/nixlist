@@ -141,7 +141,7 @@ $path = './'.$path;
  *<br />
  * @author iostream &lt;iostream.se&gt;<br />
  * @version <?php echo VERSION?><br />
- * @link <a href="http://iostream.se/project/nixlist/">http://iostream.se/project/nixlist/</a><br />
+ * @link <a href="https://github.com/fstream/nixlist">https://github.com/fstream/nixlist</a><br />
  */
 </p>
 <p>
