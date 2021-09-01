@@ -30,6 +30,9 @@ function getLs($path, $file) {
 	if ($path == './' and $file == '..')
 		return false;
 
+	$linktitle = '';
+	$class = '';
+
 	if (!is_link($path.$file) or (is_link($path.$file) and file_exists($path.readlink($path.$file)))) {
 		$permissions = substr(decoct(fileperms($path.$file)),-3);
 		$permArr = str_split($permissions);
@@ -87,6 +90,7 @@ define('CURRENTPATH', ROOTPATH.empty($_SERVER['QUERY_STRING'])?'':'?'.$_SERVER['
 $username = empty($CONFIG['username']) ? trim(`whoami`) : $CONFIG['username'];
 $hostname = empty($CONFIG['hostname']) ? $_SERVER['HTTP_HOST'] : $CONFIG['hostname'];
 
+$path = '';
 if (!empty($_GET['dir'])) {
 	$path = $_GET['dir'];
 	$path = str_replace('..', '', $path);
